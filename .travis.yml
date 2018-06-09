@@ -4,6 +4,6 @@ services:
 script:
   - docker build -t bmxmale/docker-mysql-data-initializer .
 
-  - docker run -it -v `pwd`/mysql:/var/lib/mysql bmxmale/docker-mysql-data-initializer:latest
+  - docker run -it -v `pwd`/mysql:/var/lib/mysql bmxmale/docker-mysql-data-initializer:8.0
   - ls -lash mysql | grep docker
   - sudo rm -rf mysql
